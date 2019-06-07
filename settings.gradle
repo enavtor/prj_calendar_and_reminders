@@ -1,0 +1,5 @@
+include ':modAccounts', ':modCalendar', ':modReminders', ':modStatistics'
+project(':modAccounts').projectDir = new File('mod_accounts/app')
+project(':modCalendar').projectDir = new File('mod_calendar/app')
+project(':modReminders').projectDir = new File('mod_reminders/app')
+project(':modStatistics').projectDir = new File('mod_statistics/app')

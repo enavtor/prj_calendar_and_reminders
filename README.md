@@ -1,2 +1,2 @@
-# prj_calendar_and_reminder
+# prj_calendar_and_reminders
 
