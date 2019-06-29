@@ -10,6 +10,3 @@
 	path = mod_reminders
 	url = http://git.shtvsolution.com/enavas/prj_mod_reminders.git
 	
-[submodule "mod_statistics"]
-	path = mod_statistics
-	url = http://git.shtvsolution.com/enavas/prj_mod_statistics.git
