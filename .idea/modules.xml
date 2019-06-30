@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/mod_accounts/app/modAccounts.iml" filepath="$PROJECT_DIR$/mod_accounts/app/modAccounts.iml" />
       <module fileurl="file://$PROJECT_DIR$/mod_calendar/app/modCalendar.iml" filepath="$PROJECT_DIR$/mod_calendar/app/modCalendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/mod_reminders/app/modReminders.iml" filepath="$PROJECT_DIR$/mod_reminders/app/modReminders.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mod_statistics/app/modStatistics.iml" filepath="$PROJECT_DIR$/mod_statistics/app/modStatistics.iml" />
       <module fileurl="file://$PROJECT_DIR$/prj_calendar_and_reminders.iml" filepath="$PROJECT_DIR$/prj_calendar_and_reminders.iml" />
     </modules>
   </component>

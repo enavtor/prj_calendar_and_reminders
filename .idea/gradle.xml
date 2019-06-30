@@ -11,7 +11,6 @@
             <option value="$PROJECT_DIR$/mod_accounts/app" />
             <option value="$PROJECT_DIR$/mod_calendar/app" />
             <option value="$PROJECT_DIR$/mod_reminders/app" />
-            <option value="$PROJECT_DIR$/mod_statistics/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
