@@ -1,12 +1,12 @@
 [submodule "mod_accounts"]
 	path = mod_accounts
-	url = http://git.shtvsolution.com/enavas/prj_mod_accounts.git
+	url=https://github.com/enavtor/prj_mod_accounts.git
 
 [submodule "mod_calendar"]
 	path = mod_calendar
-	url = http://git.shtvsolution.com/enavas/prj_mod_calendar.git
+	url=https://github.com/enavtor/prj_mod_calendar.git
 
 [submodule "mod_reminders"]
 	path = mod_reminders
-	url = http://git.shtvsolution.com/enavas/prj_mod_reminders.git
+	url=https://github.com/enavtor/prj_mod_reminders.git
 	
