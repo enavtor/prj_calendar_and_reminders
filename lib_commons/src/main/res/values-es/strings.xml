@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="date">EEEE, dd - MMMM - yyyy</string>
+    <string name="back">Volver</string>
+    <string name="no_user">Usuario</string>
+    <string name="no_id">ID</string>
+    <string name="loading_layout_stand_by">Espere por favor…</string>
+</resources>

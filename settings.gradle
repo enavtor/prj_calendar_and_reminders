@@ -1,4 +1,6 @@
-include ':modAccounts', ':modCalendar', ':modReminders'
+include ':libCommons', ':modAccounts', ':modCalendar', ':modReminders'
+
+project(':libCommons').projectDir = new File('lib_commons')
 project(':modAccounts').projectDir = new File('mod_accounts/app')
 project(':modCalendar').projectDir = new File('mod_calendar/app')
 project(':modReminders').projectDir = new File('mod_reminders/app')

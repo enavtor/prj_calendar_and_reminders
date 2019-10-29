@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ir_red">#ff0000</color>
+    <color name="ir_green">#00ff00</color>
+    <color name="ir_yellow">#ffff00</color>
+    <color name="ir_blue">#0000ff</color>
+    <color name="black_transparent">#7000</color>
+    <color name="focus_medium">#880088</color>
+    ç
+    <color name="focus_translucent">#88FF77FF</color>
+    <color name="progress_bar">#009dff</color>
+
+    <color name="common_divider">#1B3280</color>
+    <color name="common_divider_transparent">#5a1b3280</color>
+
+    <color name="sh_cyan_medium_darker">#00B0E6</color>
+
+    <color name="white">#FFF</color>
+    <color name="grey_background">#CCC</color>
+    <color name="black">#000000</color>
+</resources>
