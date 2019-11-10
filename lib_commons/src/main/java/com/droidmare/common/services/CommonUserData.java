@@ -1,4 +1,4 @@
-package com.shtvsolution.common.services;
+package com.droidmare.common.services;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,8 +6,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.util.Log;
 
-import com.shtvsolution.common.utils.ImageUtils;
-import com.shtvsolution.common.views.activities.CommonMainActivity;
+import com.droidmare.common.utils.ImageUtils;
+import com.droidmare.common.views.activities.CommonMainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;

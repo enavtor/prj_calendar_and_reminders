@@ -1,4 +1,4 @@
-package com.shtvsolution.common.utils;
+package com.droidmare.common.utils;
 
 
 import android.content.Context;

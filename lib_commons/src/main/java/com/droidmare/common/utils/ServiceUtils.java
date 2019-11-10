@@ -1,4 +1,4 @@
-package com.shtvsolution.common.utils;
+package com.droidmare.common.utils;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -10,7 +10,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 
-import com.shtvsolution.common.R;
+import com.droidmare.common.R;
 
 //utils to ensures the correct behaviour of any service
 //@author Eduardo on 10/09/2019.

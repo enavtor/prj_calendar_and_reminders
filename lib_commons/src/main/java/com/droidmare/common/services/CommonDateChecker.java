@@ -1,12 +1,11 @@
-package com.shtvsolution.common.services;
+package com.droidmare.common.services;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.util.Log;
 
-import com.shtvsolution.common.views.activities.CommonMainActivity;
+import com.droidmare.common.views.activities.CommonMainActivity;
 
 import java.lang.ref.WeakReference;
 import java.util.Calendar;

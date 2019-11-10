@@ -1,4 +1,4 @@
-package com.shtvsolution.common.utils;
+package com.droidmare.common.utils;
 
 import android.content.Context;
 import android.os.CountDownTimer;
@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.shtvsolution.common.R;
+import com.droidmare.common.R;
 
 //utils for creating custom Toasts
 //@author Eduardo on 09/07/2018.

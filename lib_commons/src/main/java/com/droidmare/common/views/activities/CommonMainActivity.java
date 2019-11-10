@@ -1,8 +1,7 @@
-package com.shtvsolution.common.views.activities;
+package com.droidmare.common.views.activities;
 
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewStub;
@@ -10,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.shtvsolution.common.R;
-import com.shtvsolution.common.services.CommonUserData;
-import com.shtvsolution.common.utils.STBUtils;
+import com.droidmare.common.R;
+import com.droidmare.common.services.CommonUserData;
+import com.droidmare.common.utils.STBUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

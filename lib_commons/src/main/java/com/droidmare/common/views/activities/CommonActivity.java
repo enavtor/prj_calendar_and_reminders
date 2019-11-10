@@ -1,9 +1,9 @@
-package com.shtvsolution.common.views.activities;
+package com.droidmare.common.views.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 
-import com.shtvsolution.common.utils.ToastUtils;
+import com.droidmare.common.utils.ToastUtils;
 
 public class CommonActivity extends AppCompatActivity {
 

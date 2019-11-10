@@ -1,4 +1,4 @@
-package com.shtvsolution.common.services;
+package com.droidmare.common.services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.shtvsolution.common.utils.ServiceUtils;
+import com.droidmare.common.utils.ServiceUtils;
 
 //App's data deleter service declaration
 //@author Eduardo on 24/05/2018.
