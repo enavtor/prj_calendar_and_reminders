@@ -9,22 +9,11 @@ import com.droidmare.common.R;
 
 public class DateDataStructures {
 
-    private String[] daysOfWeekLetter = new String[7];
-
     private String[] daysOfWeekText = new String[7];
 
     private String[] months = new String[12];
 
     public DateDataStructures(Resources res){
-
-        //Definition of daysOfWeekLetter:
-        daysOfWeekLetter[0] = res.getString(R.string.day_1_letter);
-        daysOfWeekLetter[1] = res.getString(R.string.day_2_letter);
-        daysOfWeekLetter[2] = res.getString(R.string.day_3_letter);
-        daysOfWeekLetter[3] = res.getString(R.string.day_4_letter);
-        daysOfWeekLetter[4] = res.getString(R.string.day_5_letter);
-        daysOfWeekLetter[5] = res.getString(R.string.day_6_letter);
-        daysOfWeekLetter[6] = res.getString(R.string.day_7_letter);
 
         //Definition of daysOfWeekText:
         daysOfWeekText[0] = res.getString(R.string.day_1_text);
@@ -48,10 +37,6 @@ public class DateDataStructures {
         months[9] = res.getString(R.string.month_10_text);
         months[10] = res.getString(R.string.month_11_text);
         months[11] = res.getString(R.string.month_12_text);
-    }
-
-    public String[] getDaysOfWeekLetter() {
-        return daysOfWeekLetter;
     }
 
     public String[] getDaysOfWeekText() {

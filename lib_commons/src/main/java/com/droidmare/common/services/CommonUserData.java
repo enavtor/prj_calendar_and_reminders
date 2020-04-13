@@ -14,8 +14,9 @@ import org.json.JSONObject;
 
 import java.lang.ref.WeakReference;
 
-//User data receiver service declaration
-//@author Eduardo on 22/05/2018.
+//User data receiver service declaration (receives and stores the current logged user data)
+//@author Eduardo on 22/05/2019.
+
 public class CommonUserData extends CommonIntentService {
 
     public static final String USER_JSON_FIELD = "userJsonString";
@@ -53,6 +54,8 @@ public class CommonUserData extends CommonIntentService {
     public void onHandleIntent(Intent dataIntent) {
 
         Log.d(COMMON_TAG, "onHandleIntent");
+
+        super.onHandleIntent(dataIntent);
 
         //If the data Intent contains the user json, that information is stored within the shared preferences:
         if (dataIntent.hasExtra(USER_JSON_FIELD)) {

@@ -25,7 +25,7 @@ public class DateUtils {
 
     private static Resources resources;
 
-    private static String[] daysOfWeekLetter, daysOfWeekText, months;
+    private static String[] daysOfWeekText, months;
 
     private static final int MIN_YEAR = 2000, MAX_YEAR = 2050;
 
@@ -40,6 +40,7 @@ public class DateUtils {
     public static int MONTH = 3;
     public static int YEAR = 4;
 
+    //This method will initialize this class attributes:
     public static void initDateParameters (Resources res){
 
         calendar = Calendar.getInstance();
@@ -48,7 +49,6 @@ public class DateUtils {
 
         DateDataStructures dateStructures = new DateDataStructures(res);
 
-        DateUtils.daysOfWeekLetter = dateStructures.getDaysOfWeekLetter();
         DateUtils.daysOfWeekText = dateStructures.getDaysOfWeekText();
         DateUtils.months = dateStructures.getMonths();
 
@@ -57,22 +57,12 @@ public class DateUtils {
         DateUtils.currentYear = calendar.get(Calendar.YEAR);
     }
 
-    public static String getDayOfWeekLetter(int i) {
-        return daysOfWeekLetter[i];
-    }
-
     public static String getDayOfWeekText(int i) {
         return daysOfWeekText[i];
     }
 
     public static String getMonth (int i){
         return months[i];
-    }
-
-    public static int getMonthValue (String month) {
-        for (int i = 0; i < months.length; i++)
-            if (month.equals(months[i])) return i;
-        return -1;
     }
 
     //This method will move back the attribute currentMonth to the previous month:
@@ -329,16 +319,8 @@ public class DateUtils {
             intervalTime
         );
 
-        if (nextRepetition != -1) {
-
-            long currentRepetition = eventJson.getLong(ConstantValues.CURRENT_REPETITION, -1);
-
-            if (currentRepetition == -1) currentRepetition = nextRepetition;
-
-            eventJson.put(ConstantValues.CURRENT_REPETITION, currentRepetition);
-
-            eventJson.put(ConstantValues.NEXT_REPETITION, nextRepetition);
-        }
+        //The next repetition value will be -1 if the next repetitions is posterior to the end date:
+        if (nextRepetition != -1) eventJson.put(ConstantValues.NEXT_REPETITION, nextRepetition);
 
         return nextRepetition;
     }
@@ -1199,11 +1181,11 @@ public class DateUtils {
         calendar.setTimeInMillis(timeInMillis);
 
         return new int[] {
-                calendar.get(Calendar.MINUTE),
-                calendar.get(Calendar.HOUR_OF_DAY),
-                calendar.get(Calendar.DAY_OF_MONTH),
-                calendar.get(Calendar.MONTH),
-                calendar.get(Calendar.YEAR)
+            calendar.get(Calendar.MINUTE),
+            calendar.get(Calendar.HOUR_OF_DAY),
+            calendar.get(Calendar.DAY_OF_MONTH),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.YEAR)
         };
     }
 }

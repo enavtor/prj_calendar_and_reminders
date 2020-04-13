@@ -15,6 +15,7 @@ import java.util.TimerTask;
 //Service that implements the broadcast receiver for date changes and a daemon
 //to ensure that the date text is always updated on the activities that have it:
 //@author Eduardo on 28/02/2019.
+
 public class CommonDateChecker extends CommonService {
 
     //Whether or not this is instantiated:
@@ -46,6 +47,7 @@ public class CommonDateChecker extends CommonService {
         registerReceiver(timeChangeReceiver, timeIntent);
     }
 
+    //The following reference is used in order to update the activities' date (located within the header):
     private static WeakReference<CommonMainActivity> mainActivityReference;
     public static void setMainActivityReference(CommonMainActivity activity) {
         mainActivityReference = new WeakReference<>(activity);
@@ -73,6 +75,7 @@ public class CommonDateChecker extends CommonService {
         super.onDestroy();
     }
 
+    //The following method creates an schedule to force the date update when a change of day takes place:
     private void createUpdateSchedule() {
 
         if (updateTimer != null) {
@@ -97,12 +100,14 @@ public class CommonDateChecker extends CommonService {
         updateTimer.schedule(updateTask, millisTillDateChange);
     }
 
+    //This method is used to update the referenced activity's date text:
     public static void setActivitiesDate () {
 
         if (mainActivityReference != null && mainActivityReference.get() != null)
             mainActivityReference.get().setDateText();
     }
 
+    //This method is used to force an update of the date view when the day changes:
     private void calculateMillisTillDateChange() {
 
         Calendar calendar = Calendar.getInstance();

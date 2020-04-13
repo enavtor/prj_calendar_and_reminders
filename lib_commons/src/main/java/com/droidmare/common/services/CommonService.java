@@ -8,8 +8,9 @@ import android.util.Log;
 
 import com.droidmare.common.utils.ServiceUtils;
 
-//App's data deleter service declaration
-//@author Eduardo on 24/05/2018.
+//Common service declaration
+//@author Eduardo on 24/05/2019.
+
 public class CommonService extends Service {
 
     protected String TAG;

@@ -20,6 +20,9 @@ public class ConstantValues {
     public static final int MONTHLY_REPETITION = 3;
     public static final int ANNUAL_REPETITION = 4;
 
+    //Local id String head value:
+    public static final String LOCAL_ID_HEAD = "LocalId:";
+
     //Repetition type default string:
     static final String DEFAULT_REPETITION_TYPE = "{\"type\":1,\"config\":\"[1]\"}";
 
@@ -40,6 +43,7 @@ public class ConstantValues {
     public static final String EVENT_YEAR_FIELD = "eventYear";
 
     public static final String EVENT_PREV_ALARMS_FIELD = "eventPrevAlarms";
+    public static final String PREV_ALARMS_ALARM_FIELD = "Alarm";
     public static final String EVENT_REP_INTERVAL_FIELD = "eventRepInterval";
     public static final String EVENT_REPETITION_TYPE_FIELD = "eventRepType";
     public static final String EVENT_REPETITION_STOP_FIELD = "eventRepStopDate";
@@ -54,6 +58,5 @@ public class ConstantValues {
     public static final String DELETE_ALARM_OP = "deleteAlarm";
     public static final String PREV_ALARM_MILLIS = "prevAlarmMillis";
     public static final String IS_FIRST_RECEIVED = "isFirsReceived";
-    public static final String CURRENT_REPETITION = "currentRepetition";
     public static final String NEXT_REPETITION = "nextRepetition";
 }

@@ -6,8 +6,9 @@ import android.util.Log;
 
 import com.droidmare.common.utils.ServiceUtils;
 
-//App's data deleter service declaration
-//@author Eduardo on 24/05/2018.
+//Common intent service declaration
+//@author Eduardo on 24/05/2019.
+
 public class CommonIntentService extends IntentService {
 
     protected String COMMON_TAG;

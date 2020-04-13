@@ -1,6 +1,9 @@
 package com.droidmare.common.views.activities;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -11,11 +14,13 @@ import android.widget.TextView;
 
 import com.droidmare.common.R;
 import com.droidmare.common.services.CommonUserData;
-import com.droidmare.common.utils.STBUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
+//Common main activity declaration
+//@author Eduardo on 24/05/2019.
 
 public class CommonMainActivity extends CommonActivity {
 
@@ -75,6 +80,7 @@ public class CommonMainActivity extends CommonActivity {
         setVersionNumber();
     }
 
+    //Since the IR buttons text will be different depending on the application, this method allows to dynamically change that text and make the button visible:
     protected void setIrButtonText(int irCode, String irText) {
         RelativeLayout irButton = null;
 
@@ -100,6 +106,7 @@ public class CommonMainActivity extends CommonActivity {
         if (irButton != null) irButton.setVisibility(View.VISIBLE);
     }
 
+    //Method that is used in order to programmatically inject the central layout (which is not common) into this activity's view once it has been loaded:
     protected void includeLayout(int containerId, int layoutToInclude) {
         ViewStub viewStub = findViewById(containerId);
         viewStub.setLayoutResource(layoutToInclude);
@@ -134,6 +141,8 @@ public class CommonMainActivity extends CommonActivity {
         final TextView name = findViewById(R.id.user_name);
         final TextView id = findViewById(R.id.user_id);
 
+        //Since this method will be called from a service executed on the background, the operation that affects
+        //the views must be explicitly executed on the main thread, otherwise an exception shall occur:
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -164,6 +173,8 @@ public class CommonMainActivity extends CommonActivity {
 
         final String upperDate = date.substring(0,1).toUpperCase() + date.substring(1);
 
+        //Since this method will be called from a service executed on the background, the operation that affects
+        //the views must be explicitly executed on the main thread, otherwise an exception shall occur:
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -173,8 +184,15 @@ public class CommonMainActivity extends CommonActivity {
         });
     }
 
+    //Method that sets the version number view text:
     protected void setVersionNumber(){
         TextView appVersion = findViewById(R.id.version_number);
-        appVersion.append(STBUtils.getAppVersionName(getApplicationContext()));
+        appVersion.append(getAppVersionName(getApplicationContext()));
+    }
+
+    //Method that obtains the application's version:
+    public static String getAppVersionName(Context context) {
+        try{return context.getPackageManager().getPackageInfo(context.getPackageName(),0).versionName;}
+        catch(PackageManager.NameNotFoundException nfe){return Build.DISPLAY;}
     }
 }
